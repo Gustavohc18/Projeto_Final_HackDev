@@ -141,6 +141,13 @@
     box-shadow: 0 0 0 0 #002855;
     transform: translate(1vw, 1vw);
   }
+
+  .cont .descricao{
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin: 10px 0;
+    /* text-align: center; */
+}
 }
 @media (min-width: 900px) {
   .espacamento {
@@ -151,6 +158,13 @@
     overflow-y: scroll;
     height: 100vh;
     color: #161616;
+  }
+
+  .cont .descricao{
+      font-size: 1.5rem;
+      font-weight: bolder;
+      margin: 40px 0;
+      text-align: center;
   }
 
   .cont::-webkit-scrollbar {

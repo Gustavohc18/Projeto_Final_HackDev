@@ -9,6 +9,10 @@ import "./Produto.css";
 import FacaLogin from "../../FacaLogin/FacaLogin";
 import { Produtos } from "../../../contexts/Produtos";
 import { CarrinhoContext } from "../../../contexts/Carrinho";
+import Carrosel from "../../Carrosel/Carrosel";
+
+import ScrollToTop from "react-scroll-to-top";
+
 
 const Produto = ({ isAutenticado }) => {
   const { handleAdicaoListaCarrinnho } = useContext(CarrinhoContext);
@@ -31,7 +35,6 @@ const Produto = ({ isAutenticado }) => {
       : "";
 
   const produto = findProduto[0];
-
   const login = isAutenticado();
 
   return (
@@ -122,6 +125,9 @@ const Produto = ({ isAutenticado }) => {
               </div>
             </div>
           </div>
+          <h1 className="descricao">VOCÊ TAMBÉM PODE GOSTAR DESTES PRODUTOS...</h1>
+          <Carrosel idParamentro = {idParamentro} categoriaProduto = {produto.id_categoria}></Carrosel>
+          <ScrollToTop top />
         </>
       ) : (
         <h1>Loading</h1>
